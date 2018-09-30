@@ -22,6 +22,7 @@ class ScaryStory {
     title.append(this.title);
     content.append(this.content);
     document.getElementById('scary_stories').append(storyDiv);
+    storyDiv.addEventListener("click", ScaryStory.playMessage);
   }
 
   static playMessage() {
