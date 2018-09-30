@@ -13,17 +13,26 @@ class ScaryStory {
   }
 
   addNewStory() {
+    const storyDiv = document.createElement("div");
     const title = document.createElement("h4");
     const content = document.createElement("p");
+    storyDiv.classList.add("story");
+    storyDiv.append(title);
+    storyDiv.append(content);
     title.append(this.title);
     content.append(this.content);
-    document.getElementById('scary_stories').append(title);
-    document.getElementById('scary_stories').append(content);
+    document.getElementById('scary_stories').append(storyDiv);
+  }
+
+  static playMessage() {
+    alert(`BOOOOO!`)
   }
 
   static addJSListener() {
-    const button = document.getElementById('submit_story');
-    button.addEventListener("submit", ScaryStory.submitStory);
+    const scaryStoryForm = document.getElementById('submit_story');
+    const stories = Array.from(document.getElementsByClassName('story'));
+    scaryStoryForm.addEventListener("submit", ScaryStory.submitStory);
+    stories.forEach(story => story.addEventListener("click", ScaryStory.playMessage));
   }
 
   static ready() {
