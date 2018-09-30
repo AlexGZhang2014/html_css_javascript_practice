@@ -1,19 +1,14 @@
 class ScaryStory {
-  constructor(attributes) {
-    this.title = attributes.title;
-    this.content = attributes.content;
+  constructor(title, content) {
+    this.title = title;
+    this.content = content;
   }
 
   static submitStory(e) {
     e.preventDefault();
     const title = document.getElementById("title").value;
     const content = document.getElementById('content').value;
-    const newStory = { title, content };
-    ScaryStory.successSubmit(newStory);
-  }
-
-  static successSubmit(data) {
-    let story = new ScaryStory(data);
+    const story = new ScaryStory(title, content);
     story.addNewStory();
   }
 
