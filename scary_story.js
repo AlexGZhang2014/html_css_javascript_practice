@@ -6,7 +6,13 @@ class ScaryStory {
 
   static submitStory(e) {
     e.preventDefault();
-    alert("BOO!");
+    const title = document.getElementById("title").value;
+    const content = document.getElementById('content').value;
+  }
+
+  static successSubmit(data) {
+    let story = new ScaryStory(data);
+
   }
 
   static addJSListener() {
@@ -19,11 +25,6 @@ class ScaryStory {
   }
 }
 
-function start() {
-  alert("STARTO");
-}
-
 document.addEventListener("DOMContentLoaded", function(event) {
   ScaryStory.ready();
-  start();
 });

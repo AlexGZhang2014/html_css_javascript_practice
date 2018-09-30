@@ -3,16 +3,17 @@
     <title>Scary Stories</title>
     <link rel="stylesheet" type="text/css" href="app.css"></link>
     <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <h1>Welcome to Generic Scary Story App!</h1>
     <form id="submit_story">
       <label for="title">Title</label>
-      <input type="text" name="title" placeholder="Enter story title..."></input>
+      <input type="text" id="title" name="title" placeholder="Enter story title..."></input>
       <br><br>
       <label for"content">Content</label>
       <br>
-      <textarea name="content" placeholder="Enter story content..."></textarea>
+      <textarea id="content" name="content" placeholder="Enter story content..."></textarea>
       <br><br>
       <input type="submit" value="Submit story"></input>
     </form>
