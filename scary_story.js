@@ -1,7 +1,10 @@
+var allStories = [];
+
 class ScaryStory {
   constructor(title, content) {
     this.title = title;
     this.content = content;
+    allStories.push(this);
   }
 
   static submitStory(e) {
